@@ -11,3 +11,5 @@ fi
 
 echo "::set-output name=exit-code::$exitcode"
 echo "::set-output name=output::$output"
+
+exit $exitcode
