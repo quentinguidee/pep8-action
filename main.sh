@@ -1,6 +1,6 @@
 #!/bin/sh -l
 
-if output=$(pycodestyle .); then
+if output=$(pycodestyle $1 .); then
     exitcode=0
     echo "Success"
 else
