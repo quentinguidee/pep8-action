@@ -15,3 +15,6 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.arguments }}
+branding:
+  icon: 'award'
+  color: 'gray-dark'
