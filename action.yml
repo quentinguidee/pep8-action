@@ -1,0 +1,17 @@
+name: 'PEP8 Action'
+description: 'Ensure the code quality of a python repository'
+inputs:
+  arguments:
+    description: 'Give arguments to the pycodestyle command.'
+    required: false
+    default: ''
+outputs:
+  exit-code:
+    description: '0: success, 1: fail'
+  output:
+    description: 'Output of the pycodestyle command. Shows formatting errors.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.arguments }}
