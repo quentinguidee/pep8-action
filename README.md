@@ -8,6 +8,10 @@ This GitHub Action runs `pycodestyle` to ensure the code is well formatted.
 
 Give arguments to the pycodestyle command.
 
+### `token`
+
+The commenter bot token.
+
 ## Outputs
 
 ### `exit-code`
@@ -21,7 +25,7 @@ Output of the pycodestyle command. Shows formatting errors.
 
 ## Example
 
-```
+```yml
 - uses: actions/checkout@master
   with:
   ref: ${{ github.event.pull_request.head.sha }}
