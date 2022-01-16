@@ -5,16 +5,17 @@ inputs:
     description: 'Give arguments to the pycodestyle command.'
     required: false
     default: ''
+  token:
+    description: 'The commenter bot token'
+    required: false
 outputs:
   exit-code:
     description: '0: success, 1: fail'
   output:
     description: 'Output of the pycodestyle command. Shows formatting errors.'
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
-  args:
-    - ${{ inputs.arguments }}
+  using: 'node12'
+  main: 'dist/index.js'
 branding:
   icon: 'award'
   color: 'gray-dark'

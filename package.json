@@ -1,0 +1,18 @@
+{
+    "name": "pep8-actions",
+    "version": "2.0.0",
+    "description": "GitHub Action running pycodestyle to ensure PEP8 compliance.",
+    "main": "src/index.js",
+    "repository": "git@github.com:quentinguidee/pep8-action.git",
+    "author": "Quentin Guidée <quentin.guidee@gmail.com>",
+    "license": "MIT",
+    "private": false,
+    "dependencies": {
+        "@actions/core": "^1.6.0",
+        "@actions/exec": "^1.1.0",
+        "@actions/github": "^5.0.0"
+    },
+    "scripts": {
+        "build": "ncc build src/index.js --license LICENSE.md"
+    }
+}
